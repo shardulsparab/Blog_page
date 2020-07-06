@@ -1,0 +1,41 @@
+
+{%load socialaccount%}
+{% load static from staticfiles %}
+<html>
+<head>
+
+    <link href ="{% static 'fpage.css' %}" rel="stylesheet" type="text/css"/>
+    <title>Document</title>
+</head>
+
+
+<>
+<h1><center> Welcome to Travel Blog</center></h1>
+
+
+{% if user.is_authenticated %}
+
+<center><h2 style="color:#808000;font-weight: bold;font-size: 39px;font-style:oblique"> Hello  {{user.username}} </h2> </center>
+<button class="b1"><a href='/BLOG_POSTS/create_blog'> Redirect to Create blog</a></button>
+<br/>
+<button class="b2"><a href='/BLOG_POSTS/show'> Redirect to Read blog</a></button>
+<br/>
+<button class="b3"><a href="{% url 'account_logout' %}">Logout </a></button>
+
+
+{% else %}
+<div class="login-box">
+
+<p><button class="btn1"> <a href ="{%url 'account_signup' %}"> Signup </a></button> </p>
+
+    <p><button class="btn2"> <a href = "{%url 'account_login' %}"> Login </a></button> </p>
+
+    <p><button class="btn3"> <a href = "{% provider_login_url 'google' %}"> Login with Gmail </a> </button></p>
+
+    <p> <button class="btn4"><a href = "{% provider_login_url 'twitter' %}"> Login with Twitter </a></button> </p>
+
+    <p><button class="btn5"> <a href = "{% provider_login_url 'facebook' method='oauth2' %}"> Login with Facebook </a></button> </p>
+{%endif%}
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+.topnav1{
+overflow:hidden;
+border:0px solid;
+}
+
+
+
+.topnav2{
+background: #e0e0e0;
+border:2px solid white;
+border-radius: 12px;
+margin-bottom:15px;
+}
+
+.topnav2:hover{
+background:#B0C4DE
+
+}
+
+.w3button{
+border:2.5px solid red;
+font-size:17px;
+border-radius:10px;
+
+
+}
+.w3button:hover{
+background:red;
+
+}
+
+.w3button2{
+border:2.5px solid lightgreen;
+font-size:17px;
+border-radius:10px;
+}
+
+
+.w3button2:hover{
+background:green;
+
+}
+

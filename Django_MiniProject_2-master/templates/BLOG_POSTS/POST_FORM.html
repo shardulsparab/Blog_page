@@ -1,0 +1,28 @@
+<html lang="en">
+
+
+
+<head>
+{% load staticfiles %}
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+</head>
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="container">
+        <div class="jumbotron">
+
+        <h1><center>Welcome to the Create_blog</center></h1>
+        {{form.as_p}}
+        {%csrf_token%}
+
+        <input type="submit" class="btn btn-primary" value="Create Blog"/>
+
+        </div>
+    </div>
+
+</form>
+
+
+</html>

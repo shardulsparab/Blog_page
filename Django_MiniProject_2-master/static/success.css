@@ -1,0 +1,22 @@
+body{
+background-image:url(2.jpg);
+background-repeat:no-repeat;
+background-size: 100% 100%
+
+}
+
+
+.btn_border{
+border-width:5px;
+border-style:inset;
+margin-left:400px;
+margin-right:400px;
+padding:20px 10px 20px;
+border-color:grey;
+
+}
+
+.heading_color{
+color:grey;
+
+}

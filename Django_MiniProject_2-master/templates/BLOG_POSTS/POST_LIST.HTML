@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Entry Records</title>
+     {% load staticfiles %}
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'post_list.css' %}"/>
+</head>
+<body>
+
+<!--            <th> Author_Name</th>-->
+<!--            <th> Places</th>-->
+<!--            <th> date </th>-->
+<!--            <th> Actions_delete </th>-->
+<!--             <th> Actions_Edit </th>-->
+<div class="topnav1">
+        {% for create_blog in create_blogs %}
+        <div class="topnav2">
+
+            <h2 style="color:white;border:solid 0px #9370DB;background-color:#9370DB;border-radius:12px;">BLOGS</h2>
+            <p><b>Author name:</b> {{create_blog.Author_Name}} </p>
+            <p><b>Places:</b>{{create_blog.places}}</p>
+            <p><b>Date:</b>{{create_blog.date}}</p>
+            <p><b>ContentBlog:</b> {{create_blog.content_blog}} </p>
+            <p><b>Images:</b> <img class="abc" src="{{create_blog.picture.url}}" width="90" height="90"></p>
+<!--            <p>Picture : {{create_blog.picture}}</p>-->
+            <button class ="w3button"> <a href="/BLOG_POSTS/delete/{{create_blog.id}} "
+                          class ="w3button1" style="text-decoration:none;color:black;opacity:0.7"><b> DELETE</b></a></button>
+
+            <button class ="w3button2"><a href="/BLOG_POSTS/edit/{{create_blog.id}}"class ="w3button3" style="text-decoration:none;color:black;opacity:0.8"><b> EDIT</b></a></button>
+            </div>
+<!-- <a href="/delete/{{ employee.id }}">DELETE</a>
+<a href="/edit/{{ employee.id }}"><span class="glyphicon glyphicon-pencil" >Edit</span></a> -->
+
+{% endfor %}
+    </div>
+
+<br>
+<br>
+<center><a href="/BLOG_POSTS/create_blog" class="btn btn-primary">Add New Records</a></center>
+</body>
+</html>
+

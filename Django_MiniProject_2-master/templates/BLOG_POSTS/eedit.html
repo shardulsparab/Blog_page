@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<form method="POST" class="post-form" action="/update/{{createblogs.id}}">
+        {% csrf_token %}
+    <div class="container">
+<br>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <h3>Update Details</h3>
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">Author_Name:</label>
+    <div class="col-sm-4">
+        <input type="text" name="Author_Name" id="id_Author_Name" required maxlength="20" value="{{createblogs.Author_Name}}"/>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label class="col-sm-2 col-form-label">places:</label>
+    <div class="col-sm-4">
+        <input type="text" name="places" id="id_places" required maxlength="100" value="{{createblogs.places}}" />
+    </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-2 col-form-label">date:</label>
+    <div class="col-sm-4">
+        <input type="date" name="date" id="id_date" required maxlength="254" value="{{createblogs.date}}" />
+    </div>
+  </div>
+        <div class="form-group row">
+    <label class="col-sm-2 col-form-label">content_blog:</label>
+    <div class="col-sm-4">
+        <input type="text" name="content_blog" id="id_content_blog" required maxlength="254" value="{{createblogs.content_blog}}" />
+    </div>
+  </div>
+  </div>
+  </div>
+    <div class="form-group row">
+    <label class="col-sm-1 col-form-label"></label>
+    <div class="col-sm-4">
+    <button type="submit" class="btn btn-success">Update</button>
+    </div>
+  </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+
+<head>
+{% load staticfiles %}
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'success.css' %}"/>
+
+</head>
+
+<body>
+    <div class="heading_color">
+    <h1><center>You have successfully Registered </center></h1>
+
+    <h1><center> Welcome to Blog Page</center></h1>
+    <h3> Select the operations that you want to perform</h3>
+    <br>
+        </div>
+    </br>
+    <div class="btn_border">
+    <center> <a href='/BLOG_POSTS/create_blog' class="btn btn-primary">Create Blog</a></center>
+    <br>
+    </br>
+    <center> <a href='/BLOG_POSTS/show' class="btn btn-primary">Read Blog</a></center>
+    <br>
+    </br>
+    <center> <a href='/BLOG_POSTS/show' class="btn btn-primary">Delete Blog</a></center>
+    <br>
+    </br>
+    <center> <a href='/BLOG_POSTS/show' class="btn btn-primary">Edit Blog</a></center>
+</div>
+</body>
+
+</html>
